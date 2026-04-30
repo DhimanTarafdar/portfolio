@@ -171,8 +171,8 @@ function initTypingEffect() {
   tagline.style.transition     = 'opacity 0.18s ease';
 
   const phrases = [
-    'Full-Stack Developer \u00b7 ML Engineer \u00b7 CS Undergraduate',
-    'MERN Stack \u00b7 PyTorch \u00b7 Deep Learning \u00b7 Research',
+    'MERN Stack Developer \u00b7 ML Engineer',
+    'PyTorch \u00b7 Deep Learning \u00b7 Research',
     'Building Intelligent Web Applications',
     'CGPA 3.75 \u00b7 HSTU, Bangladesh'
   ];
