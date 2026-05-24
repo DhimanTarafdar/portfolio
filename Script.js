@@ -151,23 +151,17 @@ function setFooterYear() {
 }
 
 // ─── TYPING EFFECT — truly zero flicker ──────
-// Root cause of flicker: setting textContent = '' for
 // even 1ms causes a blank-frame flash the browser paints.
-// Fix: NEVER set empty text. Instead fade opacity to 0,
-// swap the text while invisible, then fade back to 1.
-// The element always has content → zero blank frames.
 function initTypingEffect() {
   const tagline = document.querySelector('.hero-tagline');
   if (!tagline) return;
 
-  // Fixed dimensions — element never resizes, no layout shift
   tagline.style.display        = 'inline-block';
   tagline.style.minHeight      = '1.6em';
   tagline.style.minWidth       = '1px';
   tagline.style.whiteSpace     = 'nowrap';
   tagline.style.overflow       = 'hidden';
   tagline.style.verticalAlign  = 'middle';
-  // Smooth opacity transition for phrase swap
   tagline.style.transition     = 'opacity 0.18s ease';
 
   const phrases = [
